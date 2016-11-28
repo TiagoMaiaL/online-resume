@@ -1,0 +1,17 @@
+{
+  "name": "online-resume-template",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Tiago Maia Lopes <tiago.maia@adjetiva.com.br>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/TiagoMaiaL/online-resume-template",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
