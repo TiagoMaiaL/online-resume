@@ -9,13 +9,14 @@ var gulp      = require('gulp'),
   filter      = require('gulp-filter'),
   flatten     = require('gulp-flatten'),
   replace     = require('gulp-replace'),
+  sass        = require('gulp-sass'),
   browserSync = require('browser-sync').create();
 
 // TODO: include source maps.
 // TODO: Use promises instead of timeouts.
 
 var templatesPath = './**/*.html';
-  stylesPath      = './resources/styles/*.css',
+  stylesPath      = './resources/sass/*.scss',
   fontelloPath    = './resources/fonts/fontello/css/fontello.css',
   jsPath          = './resources/js/*.js',
   imagesPath      = './resources/images/*.{jpg,gif,png}',
@@ -110,7 +111,9 @@ gulp.task('bower-scripts', function() {
 
 gulp.task('styles', function() {
   return gulp.src(stylesPath)
-    .pipe(concat('main.css'))
+    .pipe(concat('main.scss'))
+    .pipe(sass())
+    .on('error', sass.logError)
     .pipe(prefixer({
       browsers: ['last 2 versions'],
       cascade: false
