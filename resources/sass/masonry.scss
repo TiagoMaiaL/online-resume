@@ -2,16 +2,16 @@
 
 .masonry {
     min-height: 100vh;
-}
 
-.masonry-sizer {
-    width: 50%;
-}
+    .masonry-sizer {
+        width: 50%;
+    }
 
-.masonry-item {
-    float: left;
-    width: 100%;
-    height: 45vh;
+    .masonry-item {
+        float: left;
+        width: 100%;
+        height: 45vh;
+    }
 }
 
 /* Media queries */
@@ -41,9 +41,6 @@
 
     .masonry-item {
         width: 30%;
-    }
-
-    .masonry-item {
         margin: 1%;
         margin-bottom: 2%;
     }
