@@ -3,13 +3,13 @@ var gulp      = require('gulp'),
   rename      = require('gulp-rename'),
   cleanCss    = require('gulp-clean-css'),
   prefixer    = require('gulp-autoprefixer'),
+  sass        = require('gulp-sass'),
   uglify      = require('gulp-uglify'),
   responsive  = require('gulp-responsive'),
   bower       = require('gulp-main-bower-files'),
   filter      = require('gulp-filter'),
   flatten     = require('gulp-flatten'),
   replace     = require('gulp-replace'),
-  sass        = require('gulp-sass'),
   browserSync = require('browser-sync').create();
 
 // TODO: include source maps.
