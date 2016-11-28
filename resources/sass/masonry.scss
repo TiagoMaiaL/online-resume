@@ -1,0 +1,63 @@
+/* Masonry based layout */
+
+.masonry {
+    min-height: 100vh;
+}
+
+.masonry-sizer {
+    width: 50%;
+}
+
+.masonry-item {
+    float: left;
+    width: 100%;
+    height: 45vh;
+}
+
+/* Media queries */
+
+@media screen and (min-width: 500px) {
+
+    .masonry-sizer,
+    .masonry-item {
+        width: 50%;
+    }
+
+}
+
+@media screen and (min-width: 750px) {
+
+    .masonry-item {
+        height: 50vh;
+    }
+
+}
+
+@media screen and (min-width: 900px) {
+
+    .masonry-sizer {
+        width: 33.333333%;
+    }
+
+    .masonry-item {
+        width: 30%;
+    }
+
+    .masonry-item {
+        margin: 1%;
+        margin-bottom: 2%;
+    }
+
+    .width-lg-double {
+        width: 63.3%;
+    }
+
+    .height-lg-half {
+        height: 25vh;
+    }
+
+    .height-lg-greater {
+        height: 60vh;
+    }
+
+}
