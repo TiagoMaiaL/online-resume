@@ -29,6 +29,7 @@
     "gulp-replace": "^0.5.4",
     "gulp-responsive": "^2.6.0",
     "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.9.1",
     "gulp-uglify": "^2.0.0",
     "live-reload": "^1.1.0",
     "node-sass": "^3.13.0"

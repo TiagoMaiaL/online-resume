@@ -10,6 +10,7 @@ var gulp      = require('gulp'),
   filter      = require('gulp-filter'),
   flatten     = require('gulp-flatten'),
   replace     = require('gulp-replace'),
+  sourceMaps  = require('gulp-sourcemaps'),
   browserSync = require('browser-sync').create();
 
 // TODO: include source maps.
@@ -67,9 +68,11 @@ gulp.task('images', function() {
 
 gulp.task('scripts', function() {
   gulp.src(jsPath)
+    .pipe(sourceMaps.init())
     .pipe(concat('js.all.css'))
     .pipe(uglify())
     .pipe(rename('main.min.js'))
+    .pipe(sourceMaps.write('.'))
     .pipe(gulp.dest('build/js'));
 });
 
@@ -102,15 +105,18 @@ gulp.task('bower-scripts', function() {
       }
     }))
     .pipe(jsFilter)
+    .pipe(sourceMaps.init())
     .pipe(concat('vendor.js'))
     .pipe(uglify())
     .pipe(rename('vendor.min.js'))
     .pipe(jsFilter.restore)
-    .pipe(gulp.dest('build/js/vendor'))
+    .pipe(sourceMaps.write('.'))
+    .pipe(gulp.dest('build/js'))
 });
 
 gulp.task('styles', function() {
   return gulp.src(stylesPath)
+    .pipe(sourceMaps.init())
     .pipe(concat('main.scss'))
     .pipe(sass())
     .on('error', sass.logError)
@@ -121,6 +127,7 @@ gulp.task('styles', function() {
     .on('error', console.log.bind(console))
     .pipe(cleanCss())
     .pipe(rename('main.min.css'))
+    .pipe(sourceMaps.write('.'))
     .pipe(gulp.dest('build/styles'))
     .pipe(browserSync.stream());
 });
@@ -132,19 +139,23 @@ gulp.task('bower-styles', function() {
   gulp.src('./bower.json')
     .pipe(bower(cssGlob))
     .pipe(cssFilter)
+    .pipe(sourceMaps.init())
     .pipe(concat('vendor.css'))
     .pipe(cleanCss())
     .on('error', console.log.bind(console))
     .pipe(rename('vendor.min.css'))
+    .pipe(sourceMaps.write('.'))
     .pipe(cssFilter.restore)
     .pipe(gulp.dest('build/styles'));
 
   setTimeout(function() {
     gulp.src([fontelloPath, 'build/styles/vendor.min.css'])
+      .pipe(sourceMaps.init())
       .pipe(concat('vendor.css'))
       .pipe(cleanCss())
       .on('error', console.log.bind(console))
       .pipe(rename('vendor.min.css'))
+      .pipe(sourceMaps.write('.'))
       .pipe(gulp.dest('build/styles'));
   }, 2000);
 });
