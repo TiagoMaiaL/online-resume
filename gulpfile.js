@@ -1,21 +1,30 @@
+// TODO: Use promises instead of timeouts.
+
 var gulp      = require('gulp'),
-  concat      = require('gulp-concat'),
-  rename      = require('gulp-rename'),
-  cleanCss    = require('gulp-clean-css'),
-  prefixer    = require('gulp-autoprefixer'),
-  sass        = require('gulp-sass'),
-  uglify      = require('gulp-uglify'),
-  responsive  = require('gulp-responsive'),
-  bower       = require('gulp-main-bower-files'),
+
+  // General plugins
   filter      = require('gulp-filter'),
   flatten     = require('gulp-flatten'),
   replace     = require('gulp-replace'),
+  concat      = require('gulp-concat'),
+  rename      = require('gulp-rename'),
   sourceMaps  = require('gulp-sourcemaps'),
+  bower       = require('gulp-main-bower-files'),
+
+  // Css plugins
+  cleanCss    = require('gulp-clean-css'),
+  prefixer    = require('gulp-autoprefixer'),
+  sass        = require('gulp-sass'),
+
+  // JS plugins
+  uglify      = require('gulp-uglify'),
+  responsive  = require('gulp-responsive'),
+
+  // Browser sync support
   browserSync = require('browser-sync').create();
 
-// TODO: include source maps.
-// TODO: Use promises instead of timeouts.
-
+// Paths being used to get
+// and build the related files.
 var templatesPath = './**/*.html';
   stylesPath      = './resources/sass/*.scss',
   fontelloPath    = './resources/fonts/fontello/css/fontello.css',
@@ -24,6 +33,7 @@ var templatesPath = './**/*.html';
   imagesBuildPath = './build/resources/images',
   bowerPath       = './bower_components/**/*';
 
+// Builds the images optimized for resolutions.
 gulp.task('images', function() {
   var getConfigurations = function(options) {
     return options.map(function(option) {
@@ -66,6 +76,7 @@ gulp.task('images', function() {
     .pipe(gulp.dest(imagesBuildPath));
 });
 
+// Builds the app scripts.
 gulp.task('scripts', function() {
   gulp.src(jsPath)
     .pipe(sourceMaps.init())
@@ -76,11 +87,14 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('build/js'));
 });
 
+// Watches for changes within the scripts.
+// If any changes occurred, the scripts are built.
 gulp.task('scripts-watch', ['scripts'], function() {
   browserSync.reload();
   done();
 });
 
+// Builds the scripts added by bower.
 gulp.task('bower-scripts', function() {
   var jsGlob    = '**/*.js',
       jsFilter  = filter([jsGlob], {restore: true});
@@ -114,6 +128,7 @@ gulp.task('bower-scripts', function() {
     .pipe(gulp.dest('build/js'))
 });
 
+// Builds the app styles, compiling scss files.
 gulp.task('styles', function() {
   return gulp.src(stylesPath)
     .pipe(sourceMaps.init())
@@ -132,6 +147,7 @@ gulp.task('styles', function() {
     .pipe(browserSync.stream());
 });
 
+// Builds the styles of any bower dependency.
 gulp.task('bower-styles', function() {
   var cssGlob   = '**/*.css',
       cssFilter = filter([cssGlob], {restore: true});
@@ -160,6 +176,9 @@ gulp.task('bower-styles', function() {
   }, 2000);
 });
 
+// Shortcut for building the whole app styles
+// files by using the main gulp tasks related.
+// Replaces the fonts paths within the generated files.
 gulp.task('styles-all', ['styles', 'bower-styles', 'fonts'], function() {
   setTimeout(function() {
     gulp.src('build/styles/vendor.min.css')
@@ -169,6 +188,7 @@ gulp.task('styles-all', ['styles', 'bower-styles', 'fonts'], function() {
   }, 2500);
 });
 
+// Builds each one of the fonts, placing them in the build folder.
 gulp.task('fonts', function() {
   var bowerFontsGlob  = 'bower_components/**/fonts/*.{eot,svg,ttf,woff,woff2}',
       vendorFontsGlob = 'resources/fonts/**/*.{eot,svg,ttf,woff,woff2}';
@@ -182,11 +202,14 @@ gulp.task('fonts', function() {
     .pipe(gulp.dest('build/fonts'));
 });
 
+// Watch the bower folder, and if any changes occur,
+// it'll run the scripts and all styles tasks.
 gulp.task('bower-watch', ['bower-scripts', 'styles-all'], function(done) {
   browserSync.reload();
   done();
 });
 
+// Initiates browser sync.
 gulp.task('browser-sync', function() {
   browserSync.init({
     server: {
@@ -195,6 +218,8 @@ gulp.task('browser-sync', function() {
   });
 });
 
+// Runs the development environment,
+// building the app and running using browser sync.
 gulp.task('serve', ['browser-sync', 'styles'], function() {
   gulp.watch(stylesPath, ['styles']);
   gulp.watch(jsPath, ['scripts-watch']);
