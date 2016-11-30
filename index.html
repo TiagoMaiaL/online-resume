@@ -15,29 +15,186 @@
     <body>
         <div class="content">
             <div class="container">
-                <header>
+                <header class="col-12 center-parent-vertical hero">
+                    <a href="#" class="github-header link"><span class="icon big icon-github-circled"></span></a>
+
                     <nav>
-                        <ul id="top-contacts"></ul>
+                        <ul>
+                            <li><a href="">Projects</a></li>
+                            <li><a href="">About me</a></li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
                     </nav>
+
+                    <h1>Lorem Ipsum.</h1>
+                    <h2>Lorem Ipsum dolor sit amet.</h2>
                 </header>
 
                 <main>
+                    <section id="about md-container">
+                        <div class="author-intro md-container col-md-12">
+                            <div class="col-md-7">
+                                <h3>About me</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+
+                            <div class="col-md-5">
+                                <picture>
+                                    <img class="author-image" src="" alt="author picture">
+                                </picture>
+                            </div>
+
+                            <ul class="contacts">
+                                <li class="single-contact"><a href="" class="link" title="Email link"><span class="icon big icon-mail"></span> send me an <span class="highlight-hover">email.</span></a></li>
+                                <li class="single-contact"><a href="" class="link" title="LinkedIn profile link"><span class="icon big icon-linkedin"></span> take a look at my <span class="highlight-hover">Linkedin</span>.</span></a></li>
+                                <li class="single-contact"><a href="" class="link" title="Github profile link"><span class="icon big icon-github-circled"></span> check my code at <span class="highlight-hover">Github</span>.</a></li>
+                            </ul>
+
+                            <article class="skills col-md-6 clearfix">
+                                <i class="tool-icon devicon-html5-plain"></i>
+                                <i class="tool-icon devicon-css3-plain"></i>
+                                <i class="tool-icon devicon-sass-original"></i>
+                                <i class="tool-icon devicon-javascript-plain"></i>
+                                <i class="tool-icon devicon-jquery-plain"></i>
+                                <i class="tool-icon devicon-nodejs-plain"></i>
+                                <i class="tool-icon devicon-bower-plain"></i>
+                                <i class="tool-icon devicon-gulp-plain"></i>
+                                <i class="tool-icon devicon-php-plain"></i>
+                                <i class="tool-icon devicon-laravel-plain"></i>
+                            </article>
+                        </div>
+                    </section>
                     <section id="work-experience">
                         <h3>Work</h3>
+
+                        <article class="work-info">
+                            <h4 class="job-title">Web developer</h4>
+                            <p class="employer">Ideia Inteligência</p>
+                            <p class="time-range"><time>12/11/2099</time> - <time>12/11/2099</time></p>
+                            <p class="work-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </article>
+
+                        <article class="work-info">
+                            <h4 class="job-title">Web developer</h4>
+                            <p class="employer">Ideia Inteligência</p>
+                            <p class="time-range"><time>12/11/2099</time> - <time>12/11/2099</time></p>
+                            <p class="work-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </article>
+
+                        <article class="work-info">
+                            <h4 class="job-title">Web developer</h4>
+                            <p class="employer">Ideia Inteligência</p>
+                            <p class="time-range"><time>12/11/2099</time> - <time>12/11/2099</time></p>
+                            <p class="work-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </article>
+
+                        <article class="work-info">
+                            <h4 class="job-title">Web developer</h4>
+                            <p class="employer">Ideia Inteligência</p>
+                            <p class="time-range"><time>12/11/2099</time> - <time>12/11/2099</time></p>
+                            <p class="work-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </article>
                     </section>
                     <section id="projects">
                         <h3>Projects</h3>
+
+                        <article class="project masonry-item height-lg-half center-parent-vertical">
+                            <picture>
+                                <source media="(min-width: 1000px)" srcset="build/resources/images/project-4-large.jpg 1x, build/resources/images/project-4-large-2x.jpg 2x">
+                                <source media="(min-width: 451px)" srcset="build/resources/images/project-4-medium.jpg 1x, build/resources/images/project-4-medium-2x.jpg 2x">
+                                <source media="(max-width: 450px)" srcset="build/resources/images/project-4-small.jpg 1x, build/resources/images/project-4-small-2x.jpg 2x">
+                                <img class="image-cover" src="build/resources/images/project-4-small.jpg" alt="">
+                            </picture>
+
+                            <div class="dark-overlay"></div>
+
+                            <div class="meta-info">
+                                <h4>Lorem Ipsum</h4>
+                                <ul class="sources clearfix">
+                                    <li class="link"><a href="" title="Source code"><i class="icon icon-github-circled"></i></a></li>
+                                    <li class="link"><a href="" title="Live demo"><i class="icon icon-website"></i></a></li>
+                                    <li class="link"><a href="" title="CodePen demo"><i class="icon icon-codepen"></i></a></li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="project masonry-item height-lg-half center-parent-vertical">
+                            <picture>
+                                <source media="(min-width: 1000px)" srcset="build/resources/images/project-4-large.jpg 1x, build/resources/images/project-4-large-2x.jpg 2x">
+                                <source media="(min-width: 451px)" srcset="build/resources/images/project-4-medium.jpg 1x, build/resources/images/project-4-medium-2x.jpg 2x">
+                                <source media="(max-width: 450px)" srcset="build/resources/images/project-4-small.jpg 1x, build/resources/images/project-4-small-2x.jpg 2x">
+                                <img class="image-cover" src="build/resources/images/project-4-small.jpg" alt="">
+                            </picture>
+
+                            <div class="dark-overlay"></div>
+
+                            <div class="meta-info">
+                                <h4>Lorem Ipsum</h4>
+                                <ul class="sources clearfix">
+                                    <li class="link"><a href="" title="Source code"><i class="icon icon-github-circled"></i></a></li>
+                                    <li class="link"><a href="" title="Live demo"><i class="icon icon-website"></i></a></li>
+                                    <li class="link"><a href="" title="CodePen demo"><i class="icon icon-codepen"></i></a></li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="project masonry-item height-lg-half center-parent-vertical">
+                            <picture>
+                                <source media="(min-width: 1000px)" srcset="build/resources/images/project-4-large.jpg 1x, build/resources/images/project-4-large-2x.jpg 2x">
+                                <source media="(min-width: 451px)" srcset="build/resources/images/project-4-medium.jpg 1x, build/resources/images/project-4-medium-2x.jpg 2x">
+                                <source media="(max-width: 450px)" srcset="build/resources/images/project-4-small.jpg 1x, build/resources/images/project-4-small-2x.jpg 2x">
+                                <img class="image-cover" src="build/resources/images/project-4-small.jpg" alt="">
+                            </picture>
+
+                            <div class="dark-overlay"></div>
+
+                            <div class="meta-info">
+                                <h4>Lorem Ipsum</h4>
+                                <ul class="sources clearfix">
+                                    <li class="link"><a href="" title="Source code"><i class="icon icon-github-circled"></i></a></li>
+                                    <li class="link"><a href="" title="Live demo"><i class="icon icon-website"></i></a></li>
+                                    <li class="link"><a href="" title="CodePen demo"><i class="icon icon-codepen"></i></a></li>
+                                </ul>
+                            </div>
+                        </article>
+
+
                     </section>
                     <section id="education">
                         <h3>Education</h3>
+
+                        <div class="schools">
+                            <article class="school">
+                                <h4 class="name">School name</h4>
+                                <p class="location">Brasilia, Brazil</p>
+                                <p class="time-range"><time>12/11/2099</time> - <time>12/11/2099</time></p>
+                                <p class="degree"></p> <!-- TODO -->
+                                <p class="majors"></p> <!-- TODO -->
+                                <a href="" class="url">www.schoolname.com</a>
+                            </article>
+                        </div>
+
+                        <div class="online-courses">
+                            <article class="course">
+                                <h4 class="title">Front end nanodegree</h4>
+                                <p class="school">Udacity</p>
+                                <p class="time-range"><time>12/11/2099</time> - <time>12/11/2099</time></p>
+                                <a href="" class="url">www.udacity.com</a>
+                            </article>
+                        </div>
                     </section>
-                    <section id="lets-connect">
+                    <section class="contact md-container">
                         <h3>Get in touch</h3>
-                        <ul id="footer-contacts">
+                        <p class="contact-info col-md-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+                        <ul class="contacts col-md-6">
+                            <li class="single-contact"><a href="" class="link" title="Email link"><span class="icon big icon-mail"></span> send me an <span class="highlight-hover">email.</span></a></li>
+                            <li class="single-contact"><a href="" class="link" title="LinkedIn profile link"><span class="icon big icon-linkedin"></span> take a look at my <span class="highlight-hover">Linkedin</span>.</span></a></li>
+                            <li class="single-contact"><a href="" class="link" title="Github profile link"><span class="icon big icon-github-circled"></span> check my code at <span class="highlight-hover">Github</span>.</a></li>
                         </ul>
                     </section>
+
                     <section id="map-div">
                         <h3>Where I've Lived and Worked</h3>
+                        <!-- TODO: Include map here. -->
                     </section>
                 </main>
 
