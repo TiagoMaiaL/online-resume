@@ -5,6 +5,8 @@
     - GreenSea #16a085
  */
 
+// TODO: Add colors as variables.
+
 /* ------------------------ */
 /* Imports */
 
@@ -322,6 +324,47 @@ header {
 
 .map-container {
     display: none;
+}
+
+/* work */
+
+.work {
+    hr {
+        height: 1px;
+        width: 50%;
+        margin: 0 auto;
+        margin-bottom: 3em;
+        border: 0;
+        background: #3498db;
+    }
+}
+
+.occupation-info {
+    margin-bottom: 3em;
+
+    p {
+        margin-bottom: 0.5em;
+    }
+
+    h5 {
+        margin-bottom: 1.2em;
+    }
+
+    .occupation-meta {
+        width: 100%;
+        line-height: 1.6em;
+        font-size: .9em;
+
+        .employer {
+            color: #3498db;
+            font-size: 1.1em;
+        }
+
+        .time-range {
+            color: #3498db;
+            font-size: .9em;
+        }
+    }
 }
 
 /* footer */
