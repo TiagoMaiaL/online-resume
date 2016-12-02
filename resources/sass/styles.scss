@@ -173,6 +173,22 @@ header {
 
 /* projects */
 
+.projects {
+    min-height: 100vh;
+    margin-bottom: 3em;
+
+    .portfolio-link {
+        margin-top: 1em;
+
+        a {
+            padding-left: 0;
+            .icon {
+                margin-right: 1em;
+            }
+        }
+    }
+}
+
 .project-grid {
     margin-left: -1em;
     margin-right: -1em;
@@ -367,6 +383,10 @@ header {
         }
     }
 }
+
+/* education */
+
+
 
 /* footer */
 
