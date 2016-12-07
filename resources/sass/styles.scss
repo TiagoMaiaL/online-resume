@@ -176,7 +176,8 @@ header {
 
 /* projects */
 
-.projects {
+.projects,
+.projects-sample {
     min-height: 100vh;
     margin-bottom: 3em;
 
@@ -262,6 +263,12 @@ header {
         .dark-overlay {
             opacity: .8;
         }
+    }
+}
+
+.projects-sample {
+    .project {
+        height: 45vh;
     }
 }
 
@@ -485,22 +492,42 @@ footer {
         font-size: 1.1em;
         padding: 1em;
 
-        .meta-info {
-            font-size: .8em;
-            width: 35%;
-            float: left;
-        }
+        // .meta-info {
+        //     font-size: .8em;
+        //     width: 35%;
+        //     float: left;
+        // }
 
-        .work-description {
-            width: 60%;
-            float: right;
-        }
+        // .work-description {
+        //     width: 60%;
+        //     float: right;
+        // }
     }
 }
 
-// @media (min-width: 550px) and (max-width: 699px) {
+@media (min-width: 600px) {
 
-// }
+    .work {
+        h3 {
+            margin-bottom: inherit;
+        }
+    }
+
+    .projects-sample {
+        min-height: inherit;
+
+        .project-grid {
+            // TODO: Add a mixin for the flex rules.
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+
+        .project {
+            width: calc(100% / 3);
+        }
+    }
+}
 
 @media (min-width: 700px) {
 
