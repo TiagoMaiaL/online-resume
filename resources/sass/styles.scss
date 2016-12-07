@@ -507,9 +507,13 @@ footer {
 
 @media (min-width: 600px) {
 
+    body {
+        font-size: 19px;
+    }
+
     .work {
         h3 {
-            margin-bottom: inherit;
+            margin-bottom: 1em;
         }
     }
 
