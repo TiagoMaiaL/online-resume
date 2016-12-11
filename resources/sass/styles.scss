@@ -557,6 +557,21 @@ footer {
         margin-top: 1em;
     }
 
+    .occupation-info {
+        padding: 3em;
+        padding-left: 0;
+        font-size: 1em;
+    }
+
+    .schools,
+    .online-courses {
+        padding: 1em;
+    }
+
+    .course,
+    .school {
+        margin-left: 0;
+    }
 }
 
 @media (min-width: 900px) {
