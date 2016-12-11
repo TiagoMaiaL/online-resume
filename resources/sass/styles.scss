@@ -535,19 +535,22 @@ footer {
 
 @media (min-width: 700px) {
 
+    .about {
+        margin-bottom: 2em;
+
+        .skills-container {
+            .skills {
+                padding-top: 0;
+                width: 100%;
+                text-align: left;
+            }
+        }
+    }
+
     .project {
         .sources {
             font-size: 1.2em;
         }
-    }
-
-    .contacts,
-    .skills {
-        padding-left: 1.5em;
-    }
-
-    .skills {
-        padding-top: 0;
     }
 
     .contact-info {
