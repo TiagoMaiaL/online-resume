@@ -302,6 +302,10 @@ header {
         }
     }
 
+    .author-intro {
+        margin-bottom: 2em;
+    }
+
     .author-image {
         // TODO
         img {
@@ -367,7 +371,7 @@ header {
 
 .occupation-info {
     padding: 2em 0 2em 0;
-    border-bottom: 1px solid #3498db;
+    border-bottom: 1px solid #196090;
 
     &:last-child {
         border: none;
@@ -535,6 +539,10 @@ footer {
 
 @media (min-width: 700px) {
 
+    .lg-hidden {
+        display: none;
+    }
+
     .about {
         margin-bottom: 2em;
 
@@ -543,6 +551,7 @@ footer {
                 padding-top: 0;
                 width: 100%;
                 text-align: left;
+                font-size: 1em;
             }
         }
     }
@@ -566,6 +575,7 @@ footer {
     .schools,
     .online-courses {
         padding: 1em;
+        margin: 0 auto;
     }
 
     .course,
