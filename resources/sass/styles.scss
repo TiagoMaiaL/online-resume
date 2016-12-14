@@ -617,9 +617,6 @@ footer {
         cursor: pointer;
 
         &:hover {
-            box-shadow: 0px 0px 30px 0px rgba(28,28,28,1);
-            transform: scale(1.05);
-
             .dark-overlay {
                 opacity: .8;
             }
