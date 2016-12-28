@@ -11,66 +11,25 @@
 
         <script src="build/js/vendor.min.js"></script>
         <script src="build/js/main.min.js"></script>
+
+        <!-- TODO: Remove this and add to the minified version. -->
+        <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+        <link rel="import" href="components/header-intro/header-intro.html">
+        <link rel="import" href="components/about/author-about.html">
     </head>
     <body>
         <div class="content">
             <div class="container">
                 <header class="col-12 center-parent-vertical hero">
-                    <a href="#" class="github-header link"><span class="icon big icon-github-circled"></span></a>
-
-                    <nav>
-                        <ul>
-                            <li><a href="">Projects</a></li>
-                            <li><a href="">About me</a></li>
-                            <li><a href="">Contact</a></li>
-                        </ul>
-                    </nav>
-
-                    <h1>Lorem Ipsum.</h1>
-                    <h2>Lorem Ipsum dolor sit amet.</h2>
+                    <!-- TODO: Add the needed attributes. -->
+                    <header-intro></header-intro>
                 </header>
 
                 <main>
                     <section class="about grid-middle md-container">
                         <div class="md-container col-md-12">
-                            <div class="author-intro md-container col-md-12">
-                                <article class="information col-md-7">
-                                    <h3>About me</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                </article>
-
-                                <div class="author-image center-parent-vertical col-md-5">
-                                    <picture>
-                                        <img src="" alt="author picture">
-                                    </picture>
-                                </div>
-                            </div>
-
-                            <ul class="contacts col-md-5">
-                                <li class="single-link"><a href="" class="link" title="Email link"><span class="icon big icon-mail"></span> send me an <span class="highlight-hover">email.</span></a></li>
-                                <li class="single-link"><a href="" class="link" title="LinkedIn profile link"><span class="icon big icon-linkedin"></span> take a look at my <span class="highlight-hover">Linkedin</span>.</span></a></li>
-                                <li class="single-link"><a href="" class="link" title="Github profile link"><span class="icon big icon-github-circled"></span> check my code at <span class="highlight-hover">Github</span>.</a></li>
-                            </ul>
-
-                            <div class="skills-container col-md-7">
-                                <h5 class="lg-hidden">Skills &amp; tools</h5>
-                                <p class="lg-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                                <article class="skills col-md-6">
-                                    <i class="tool-icon devicon-html5-plain"></i>
-                                    <i class="tool-icon devicon-css3-plain"></i>
-                                    <i class="tool-icon devicon-sass-original"></i>
-                                    <i class="tool-icon devicon-javascript-plain"></i>
-                                    <i class="tool-icon devicon-jquery-plain"></i>
-                                    <i class="tool-icon devicon-nodejs-plain"></i>
-                                    <i class="tool-icon devicon-bower-plain"></i>
-                                    <i class="tool-icon devicon-gulp-plain"></i>
-                                    <i class="tool-icon devicon-php-plain"></i>
-                                    <i class="tool-icon devicon-laravel-plain"></i>
-                                    <i class="tool-icon devicon-git-plain"></i>
-                                    <i class="tool-icon devicon-github-plain"></i>
-                                </article>
-                            </div>
+                            <author-about></author-about>
                         </div>
                     </section>
                     <section class="work grid-middle" id="work-experience">

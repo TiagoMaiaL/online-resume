@@ -1,0 +1,39 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../general/author-contacts.html">
+<link rel="import" href="../general/author-skills.html">
+
+<dom-module id="author-about">
+    <style>
+        /* Add the desired style here. */
+    </style>
+
+    <template>
+        <div class="author-intro md-container col-md-12">
+            <article class="information col-md-7">
+                <h3>About me</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </article>
+
+            <div class="author-image center-parent-vertical col-md-5">
+                <picture>
+                    <img src="" alt="author picture">
+                </picture>
+            </div>
+        </div>
+
+        <author-contacts></author-contacts>
+        <author-skills></author-skills>
+    </template>
+</dom-module>
+
+<script>
+    // TODO: Add the object handling here.
+    // TODO: Try passing intro information as an object.
+    Polymer({
+        is: "author-about",
+        ready: function() {
+
+        }
+    });
+</script>
