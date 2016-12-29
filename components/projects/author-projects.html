@@ -1,0 +1,31 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="./single-project.html">
+
+<dom-module id="author-projects">
+    <style>
+        /* Add the desired style here. */
+    </style>
+
+    <template>
+        <h3>Projects</h3>
+
+        <div class="project-grid clearfix">
+            <!-- TODO: Iterate over each single-project -->
+            <single-project></single-project>
+            <single-project></single-project>
+            <single-project></single-project>
+        </div>
+        <p class="portfolio-link single-link"><a href="" class="link"><i class="icon icon-website"></i>Check more on my <span class="highlight-hover">portfolio.</span></a></p>
+    </template>
+</dom-module>
+
+<script>
+    // TODO: Add the object handling here.
+    // TODO: Try passing intro information as an object.
+    Polymer({
+        is: "author-projects",
+        ready: function() {
+
+        }
+    });
+</script>
