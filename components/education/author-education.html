@@ -1,0 +1,34 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="./course.html">
+<link rel="import" href="./school.html">
+
+<dom-module id="author-education">
+    <style>
+        /* Add the desired style here. */
+    </style>
+
+    <template>
+        <h3>Education</h3>
+
+        <div class="schools col-md-5">
+            <h4>Schools</h4>
+            <single-school></single-school>
+        </div>
+
+        <div class="online-courses col-md-5">
+            <h4>Online courses</h4>
+            <single-course></single-course>
+        </div>
+    </template>
+</dom-module>
+
+<script>
+    // TODO: Add the object handling here.
+    // TODO: Try passing intro information as an object.
+    Polymer({
+        is: "author-education",
+        ready: function() {
+
+        }
+    });
+</script>
