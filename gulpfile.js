@@ -10,6 +10,7 @@ var gulp      = require('gulp'),
   rename      = require('gulp-rename'),
   sourceMaps  = require('gulp-sourcemaps'),
   bower       = require('gulp-main-bower-files'),
+  ignore      = require('gulp-ignore'),
 
   // Css plugins
   cleanCss    = require('gulp-clean-css'),
@@ -81,6 +82,7 @@ gulp.task('scripts', function() {
   gulp.src(jsPath)
     .pipe(sourceMaps.init())
     .pipe(concat('js.all.css'))
+    .pipe(ignore.exclude(["**/*.map"]))
     .pipe(uglify())
     .pipe(rename('main.min.js'))
     .pipe(sourceMaps.write('.'))
@@ -89,7 +91,7 @@ gulp.task('scripts', function() {
 
 // Watches for changes within the scripts.
 // If any changes occurred, the scripts are built.
-gulp.task('scripts-watch', ['scripts'], function() {
+gulp.task('scripts-watch', ['scripts'], function(done) {
   browserSync.reload();
   done();
 });

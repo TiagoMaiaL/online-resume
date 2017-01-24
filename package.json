@@ -24,6 +24,7 @@
     "gulp-concat": "^2.6.0",
     "gulp-filter": "^4.0.0",
     "gulp-flatten": "^0.3.1",
+    "gulp-ignore": "^2.0.2",
     "gulp-main-bower-files": "^1.5.3",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",
