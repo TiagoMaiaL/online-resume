@@ -1,5 +1,4 @@
 // Jquery's document ready handler
-// 
 $(function() {
 
   // Object tree responsible for keeping the resume 
@@ -17,36 +16,42 @@ $(function() {
       ],
       pictureUrl: "",
       display: function() {
-        
+        $('section.about').append(
+          resumeTemplate.about.replace("%data%", JSON.stringify(this))
+        );
       }
     },
 
     work: {
       jobs: [ 
         {
-          employer: "" 
-          title: "" 
-          location: "" 
-          dates: ""
-          description: "" 
+          employer: "", 
+          title: "",
+          location: "",
+          dates: "",
+          description: "",
         }
       ],
       display: function() {
-
+        $('section.work').append(
+          resumeTemplate.work.replace("%data%", JSON.stringify(this))
+        );
       }
     },
 
     projects: {
       projects: [
         {
-          title: ""
-          dates: ""
-          description: ""
-          images: ""
+          title: "",
+          dates: "",
+          description: "",
+          images: "",
         }
       ],
       display: function() {
-        
+        $('section.projects-sample').append(
+          resumeTemplate.projects.replace("%data%", JSON.stringify(this))
+        );
       }
     },
 
@@ -70,9 +75,24 @@ $(function() {
         }
       ],
       display: function() {
-
+        $('section.education').append(
+          resumeTemplate.education.replace("%data%", JSON.stringify(this))
+        );
+      }
+    },
+    contacts: {
+      contacts: {},
+      display: function() {
+        $('section.contact').append(
+          resumeTemplate.contacts.replace("%data%", JSON.stringify(this.data))
+        );
       }
     }
   };
+
+  // Calls display on all objects within the author one.
+  for (section in author) {
+    author[section].display();
+  }
 
 });
