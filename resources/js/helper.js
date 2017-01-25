@@ -1,6 +1,12 @@
 // Jquery's document ready handler
 $(function() {
 
+  // Replaces the %data% occurrences on the text 
+  // passed with the data argument provided.
+  var replaceData = function(text, data) {
+    return text.replace("%data%", "[" + JSON.stringify(data) + "]");
+  }
+
   // Object tree responsible for keeping the resume 
   // information used in the template.
   var author = {
@@ -17,7 +23,7 @@ $(function() {
       pictureUrl: "",
       display: function() {
         $('section.about').append(
-          resumeTemplate.about.replace("%data%", JSON.stringify(this))
+          replaceData(resumeTemplate.about, this)
         );
       }
     },
@@ -34,7 +40,7 @@ $(function() {
       ],
       display: function() {
         $('section.work').append(
-          resumeTemplate.work.replace("%data%", JSON.stringify(this))
+          replaceData(resumeTemplate.work, this)
         );
       }
     },
@@ -50,7 +56,7 @@ $(function() {
       ],
       display: function() {
         $('section.projects-sample').append(
-          resumeTemplate.projects.replace("%data%", JSON.stringify(this))
+          replaceData(resumeTemplate.projects, this)
         );
       }
     },
@@ -76,7 +82,7 @@ $(function() {
       ],
       display: function() {
         $('section.education').append(
-          resumeTemplate.education.replace("%data%", JSON.stringify(this))
+          replaceData(resumeTemplate.education, this)
         );
       }
     },
@@ -84,13 +90,14 @@ $(function() {
       contacts: {},
       display: function() {
         $('section.contact').append(
-          resumeTemplate.contacts.replace("%data%", JSON.stringify(this.data))
+          replaceData(resumeTemplate.contacts, this)
         );
       }
     }
   };
 
-  // Calls display on all objects within the author one.
+  // Calls display on all objects within the author one,
+  // Appending each element section to the html.
   for (section in author) {
     author[section].display();
   }
