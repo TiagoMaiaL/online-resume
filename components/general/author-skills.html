@@ -1,42 +1,38 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
 <dom-module id="author-skills">
-    <style>
-        /* Add the desired style here. */
-    </style>
+  <style>
+      /* Add the desired style here. */
+  </style>
 
-    <template>
-        <div class="skills-container">
-            <h5 class="lg-hidden">Skills &amp; tools</h5>
-            <p class="lg-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+  <template>
+    <div class="skills-container">
+      <h5 class="lg-hidden">Skills &amp; tools</h5>
+      <p class="lg-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
 
-            <!-- TODO: Add a component for each icon -->
-
-            <article class="skills col-md-12">
-                <i class="tool-icon devicon-html5-plain"></i>
-                <i class="tool-icon devicon-css3-plain"></i>
-                <i class="tool-icon devicon-sass-original"></i>
-                <i class="tool-icon devicon-javascript-plain"></i>
-                <i class="tool-icon devicon-jquery-plain"></i>
-                <i class="tool-icon devicon-nodejs-plain"></i>
-                <i class="tool-icon devicon-bower-plain"></i>
-                <i class="tool-icon devicon-gulp-plain"></i>
-                <i class="tool-icon devicon-php-plain"></i>
-                <i class="tool-icon devicon-laravel-plain"></i>
-                <i class="tool-icon devicon-git-plain"></i>
-                <i class="tool-icon devicon-github-plain"></i>
-            </article>
-        </div>
-    </template>
+      <article class="skills col-md-12">
+        <template is="dom-repeat" items="{{toArray(tools)}}">
+          <!-- TODO: Add a component for each icon -->
+          <i class$="tool-icon [[item.value]]"></i>
+        </template>
+      </article>
+    </div>
+  </template>
 </dom-module>
 
 <script>
-    // TODO: Add the object handling here.
-    // TODO: Try passing intro information as an object.
-    Polymer({
-        is: "author-skills",
-        ready: function() {
-
-        }
-    });
+  Polymer({
+    is: "author-skills",
+    properties: {
+      tools: Object
+    },
+    toArray: function(object) {
+      return Object.keys(object).map(function(key) {
+        return {
+          name: key,
+          value: object[key]
+        };
+      });
+    }
+  });
 </script>
