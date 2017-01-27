@@ -1,28 +1,29 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
 <dom-module id="work-experience">
-    <style>
-        /* Add the desired style here. */
-    </style>
+  <style>
+    /* Add the desired style here. */
+  </style>
 
-    <template>
-        <article class="occupation-info clearfix">
-            <h5 class="job-title">Web developer</h5>
-            <div class="meta-info center-parent-vertical">
-                <p class="occupation-meta"><span class="employer">Lorem Ipsum</span><span class="time-range"><time>11-2099</time></span></p>
-            </div>
-            <p class="work-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </article>
-    </template>
+  <template>
+    <article class="occupation-info clearfix">
+      <h5 class="job-title">[[title]]</h5>
+      <div class="meta-info center-parent-vertical">
+          <p class="occupation-meta"><span class="employer">[[employer]]</span><span class="time-range"><time>[[date]]</time></span></p>
+      </div>
+      <p class="work-description">[[description]]</p>
+    </article>
+  </template>
 </dom-module>
 
 <script>
-    // TODO: Add the object handling here.
-    // TODO: Try passing intro information as an object.
-    Polymer({
-        is: "work-experience",
-        ready: function() {
-
-        }
-    });
+  Polymer({
+    is: "work-experience",
+    properties: {
+      title: String,
+      employer: String,
+      date: String,
+      description: String
+    }
+  });
 </script>

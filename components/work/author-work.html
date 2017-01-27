@@ -2,28 +2,33 @@
 <link rel="import" href="./work-experience.html">
 
 <dom-module id="author-work">
-    <style>
-        /* Add the desired style here. */
-    </style>
+  <style>
+    /* Add the desired style here. */
+  </style>
 
-    <template>
-        <h3>Work</h3>
+  <template>
+    <h3>Work</h3>
 
-        <!-- TODO: Add a loop here. -->
-        <work-experience></work-experience>
-        <work-experience></work-experience>
-        <work-experience></work-experience>
-        <work-experience></work-experience>
+    <!-- TODO: Add a loop here. -->
+    <template is="dom-repeat" items="[[info.jobs]]">
+      <work-experience
+        title="[[item.title]]"
+        employer="[[item.employer]]"
+        date="[[item.date]]"
+        description="[[item.description]]">
+      </work-experience>
     </template>
+
+  </template>
 </dom-module>
 
 <script>
-    // TODO: Add the object handling here.
-    // TODO: Try passing intro information as an object.
-    Polymer({
-        is: "author-work",
-        ready: function() {
-
-        }
-    });
+  // TODO: Add the object handling here.
+  // TODO: Try passing intro information as an object.
+  Polymer({
+    is: "author-work",
+    properties: {
+      info: Object
+    }
+  });
 </script>

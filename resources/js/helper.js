@@ -54,11 +54,44 @@ $(function() {
     work: {
       jobs: [
         {
-          employer: "",
-          title: "",
-          location: "",
-          dates: "",
-          description: "",
+          employer: "Lorem Ipsum",
+          title: "Web developer",
+          location: "Brasília area, Brazil",
+          date: "11-2099",
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\
+           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit,\
+           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        },
+        {
+          employer: "Lorem Ipsum",
+          title: "Web developer",
+          location: "Brasília area, Brazil",
+          date: "11-2099",
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\
+           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit,\
+           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        },
+        {
+          employer: "Lorem Ipsum",
+          title: "Web developer",
+          location: "Brasília area, Brazil",
+          date: "11-2099",
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\
+           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit,\
+           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        },
+        {
+          employer: "Lorem Ipsum",
+          title: "Web developer",
+          location: "Brasília area, Brazil",
+          date: "11-2099",
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\
+           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit,\
+           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         }
       ],
       display: function() {
