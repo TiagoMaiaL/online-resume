@@ -1,27 +1,28 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
 <dom-module id="single-school">
-    <style>
-        /* Add the desired style here. */
-    </style>
+  <style>
+    /* Add the desired style here. */
+  </style>
 
-    <template>
-        <article class="school">
-            <h6>School name, <span class="location">Brasilia, Brazil</span></h6>
-            <p><span class="degree-title">Degree title</span> &bull; <span class="time-range"><time>12/11/2099</time></p>
-            <p class="majors">Major text</p> <!-- TODO -->
-            <a href="" class="single-link link"><i class="icon icon-website"></i> www.schoolname.com</a>
-        </article>
-    </template>
+  <template>
+    <article class="school">
+      <h6>[[school.name]], <span class="location">[[school.location]]</span></h6>
+      <p><span class="degree-title">[[school.degree]]</span> &bull; <span class="time-range"><time>[[school.dates]]</time></p>
+      <p class="majors">[[school.majors]]</p>
+      <a href="[[school.url]]" class="single-link link"><i class="icon icon-website"></i> [[school.url]]</a>
+    </article>
+  </template>
 </dom-module>
 
 <script>
-    // TODO: Add the object handling here.
-    // TODO: Try passing intro information as an object.
-    Polymer({
-        is: "single-school",
-        ready: function() {
+  Polymer({
+    is: "single-school",
+    properties: {
+      school: Object
+    },
+    ready: function() {
 
-        }
-    });
+    }
+  });
 </script>

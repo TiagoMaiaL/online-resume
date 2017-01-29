@@ -147,20 +147,20 @@ $(function() {
     education: {
       schools: [
         {
-          name: "",
-          location: "",
-          degree: "",
-          majors: "",
-          dates: "",
-          url: ""
+          name: "School name",
+          location: "Brasilia, Brazil",
+          degree: "Degree title",
+          majors: "Major text",
+          dates: "12/11/2099",
+          url: "www.schoolname.com"
         }
       ],
       onlineCourses: [
         {
-          title: "",
-          school: "",
-          dates: "",
-          url: ""
+          title: "Front end nanodegree",
+          school: "Udacity",
+          dates: "12/11/2099",
+          url: "www.udacity.com"
         }
       ],
       display: function() {
