@@ -104,10 +104,37 @@ $(function() {
     projects: {
       projects: [
         {
-          title: "",
-          dates: "",
-          description: "",
-          images: "",
+          title: "Lorem Ipsum",
+          dates: "24/02/2016",
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+          images: [],
+          links: {
+            codepen: '#',
+            github: '#',
+            demo: '#'
+          }
+        },
+        {
+          title: "Lorem Ipsum",
+          dates: "24/02/2016",
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+          images: [],
+          links: {
+            codepen: '#',
+            github: '#',
+            demo: '#'
+          }
+        },
+        {
+          title: "Lorem Ipsum",
+          dates: "24/02/2016",
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+          images: [],
+          links: {
+            codepen: '#',
+            github: '#',
+            demo: '#'
+          }
         }
       ],
       display: function() {

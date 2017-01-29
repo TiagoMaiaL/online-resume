@@ -2,30 +2,28 @@
 <link rel="import" href="./single-project.html">
 
 <dom-module id="author-projects">
-    <style>
-        /* Add the desired style here. */
-    </style>
+  <style>
+    /* Add the desired style here. */
+  </style>
 
-    <template>
-        <h3>Projects</h3>
+  <template>
+    <h3>Projects</h3>
 
-        <div class="project-grid clearfix">
-            <!-- TODO: Iterate over each single-project -->
-            <single-project class="col-md-4"></single-project>
-            <single-project class="col-md-4"></single-project>
-            <single-project class="col-md-4"></single-project>
-        </div>
-        <p class="portfolio-link single-link"><a href="" class="link"><i class="icon icon-website"></i>Check more on my <span class="highlight-hover">portfolio.</span></a></p>
-    </template>
+    <div class="project-grid clearfix">
+      <template is="dom-repeat" items="[[info.projects]]">
+        <single-project project-data="[[item]]" class="col-md-4"></single-project>
+      </template>
+    </div>
+
+    <p class="portfolio-link single-link"><a href="" class="link"><i class="icon icon-website"></i>Check more on my <span class="highlight-hover">portfolio.</span></a></p>
+  </template>
 </dom-module>
 
 <script>
-    // TODO: Add the object handling here.
-    // TODO: Try passing intro information as an object.
-    Polymer({
-        is: "author-projects",
-        ready: function() {
-
-        }
-    });
+  Polymer({
+    is: "author-projects",
+    properties: {
+      info: Object
+    }
+  });
 </script>
