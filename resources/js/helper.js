@@ -22,30 +22,30 @@ $(function() {
       velit esse cillum dolore eu fugiat nulla pariatur. \
       Excepteur sint occaecat cupidatat non proident, \
       sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      contacts: {
-        github: '#',
-        email: '#',
-        linkedin: '#'
+      contacts: { // TODO: Move this object to an external variable.
+        github: "#",
+        email: "#",
+        linkedin: "#"
       },
-      skills: 'js, html, css, php, objective-c',
+      skills: "js, html, css, php, objective-c",
       devicons: {
-        html: 'devicon-html5-plain',
-        css: 'devicon-css3-plain',
-        sass: 'devicon-sass-original',
-        jquery: 'devicon-javascript-plain',
-        javascript: 'devicon-jquery-plain',
-        node: 'devicon-nodejs-plain',
-        bower: 'devicon-bower-plain',
-        gulp: 'devicon-gulp-plain',
-        php: 'devicon-php-plain',
-        laravel: 'devicon-laravel-plain',
-        git: 'devicon-git-plain',
-        github: 'devicon-github-plain',
-        ios: 'devicon-apple-original'
+        html: "devicon-html5-plain",
+        css: "devicon-css3-plain",
+        sass: "devicon-sass-original",
+        jquery: "devicon-javascript-plain",
+        javascript: "devicon-jquery-plain",
+        node: "devicon-nodejs-plain",
+        bower: "devicon-bower-plain",
+        gulp: "devicon-gulp-plain",
+        php: "devicon-php-plain",
+        laravel: "devicon-laravel-plain",
+        git: "devicon-git-plain",
+        github: "devicon-github-plain",
+        ios: "devicon-apple-original"
       },
       pictureUrl: "",
       display: function() {
-        $('section.about').append(
+        $("section.about").append(
           replaceData(resumeTemplate.about, this)
         );
       }
@@ -95,7 +95,7 @@ $(function() {
         }
       ],
       display: function() {
-        $('section.work').append(
+        $("section.work").append(
           replaceData(resumeTemplate.work, this)
         );
       }
@@ -109,9 +109,9 @@ $(function() {
           description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
           images: [],
           links: {
-            codepen: '#',
-            github: '#',
-            demo: '#'
+            codepen: "#",
+            github: "#",
+            demo: "#"
           }
         },
         {
@@ -120,9 +120,9 @@ $(function() {
           description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
           images: [],
           links: {
-            codepen: '#',
-            github: '#',
-            demo: '#'
+            codepen: "#",
+            github: "#",
+            demo: "#"
           }
         },
         {
@@ -131,14 +131,14 @@ $(function() {
           description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
           images: [],
           links: {
-            codepen: '#',
-            github: '#',
-            demo: '#'
+            codepen: "#",
+            github: "#",
+            demo: "#"
           }
         }
       ],
       display: function() {
-        $('section.projects-sample').append(
+        $("section.projects-sample").append(
           replaceData(resumeTemplate.projects, this)
         );
       }
@@ -164,15 +164,22 @@ $(function() {
         }
       ],
       display: function() {
-        $('section.education').append(
+        $("section.education").append(
           replaceData(resumeTemplate.education, this)
         );
       }
     },
     contacts: {
-      contacts: {},
+      contacts: {
+        github: "#",
+        email: "#",
+        linkedin: "#"
+      },
+      callAction: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\
+       sed do eiusmod tempor incididunt ut labore\
+        et dolore magna aliqua. Ut enim ad minim.",
       display: function() {
-        $('section.contact').append(
+        $("section.contact").append(
           replaceData(resumeTemplate.contacts, this)
         );
       }
