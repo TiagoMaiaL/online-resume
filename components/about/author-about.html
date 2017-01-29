@@ -4,27 +4,64 @@
 
 <dom-module id="author-about">
   <style>
-    /* Add the desired style here. */
+    .about {
+      padding-top: 2em;
+      margin-bottom: 5em;
+    }
+
+    .information {
+      margin-bottom: 1em;
+    }
+
+    .information p {
+      margin-bottom: 2em;
+    }
+
+    .information p:last-child {
+      margin: 0;
+    }
+
+    .author-intro {
+      margin-bottom: 2em;
+    }
+
+    .author-image img {
+      display: block;
+      margin: 0 auto;
+      width: 50%;
+    }
+
+    author-skills {
+      padding: 1em 0 0 0;
+      text-align: center;
+    }
+
+    .author-image,
+    .contacts,
+    author-skills {
+        margin-bottom: 1.5em;
+    }
+
   </style>
 
   <template>
-      <div class="md-container">
-        <div class="author-intro md-container col-md-12">
-          <article class="information col-md-7">
-            <h3>About me</h3>
-            <p>[[info.welcomeMessage]]</p>
-            <!-- TODO: Place the skills with the about section paragraph. -->
-            <p>[[info.about]] <br> [[info.skills]]</p>
-          </article>
+    <div class="md-container">
+      <div class="author-intro md-container col-md-12">
+        <article class="information col-md-7">
+          <h3>About me</h3>
+          <p>[[info.welcomeMessage]]</p>
+          <p>[[info.about]] <br> [[info.skills]]</p>
+        </article>
 
-          <div class="author-image center-parent-vertical col-md-5">
-            <picture>
-              <img src="" alt="author picture">
-            </picture>
-          </div>
+        <div class="author-image center-parent-vertical col-md-5">
+          <picture>
+            <img src="" alt="author picture">
+            <!-- TODO: Add the author image link. -->
+          </picture>
         </div>
-        <single-contacts contacts="{{info.contacts}}" class="col-md-6"></single-contacts>
-        <author-skills tools="{{info.devicons}}" class="col-md-6"></author-skills>
+      </div>
+      <single-contacts contacts="{{info.contacts}}" class="col-md-6"></single-contacts>
+      <author-skills tools="{{info.devicons}}" class="col-md-6"></author-skills>
     </div>
   </template>
 </dom-module>
