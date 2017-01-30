@@ -1,70 +1,72 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
 <dom-module id="header-intro">
-    <style>
-        h1,
-        h2 {
-            color: #fff;
-            text-align: center;
-        }
+  <style>
+    h1,
+    h2 {
+      color: #fff;
+      text-align: center;
+    }
 
-        h1 {
-            font-size: 2.4em;
-            margin-bottom: 0.5em;
-        }
+    h1 {
+      font-size: 2.4em;
+      margin-bottom: 0.5em;
+    }
 
-        h2 {
-            font-size: 1.4em;
-        }
+    h2 {
+      font-size: 1.4em;
+    }
 
-        nav {
-            position: fixed;
-            top: 0;
-            display: none;
-        }
+    nav {
+      position: fixed;
+      top: 0;
+      display: none;
+    }
 
-        nav ul li {
-            float: left;
-            margin-left: 1em;
-        }
+    nav ul li {
+      float: left;
+      margin-left: 1em;
+    }
 
-        .github-header {
-            font-size: 1.5em;
-            position: absolute;
-            top: 10px;
-            left: 0;
-            padding: 0.5em;
-            transition: all .2s ease-in-out;
-        }
+    .github-header {
+      font-size: 1.5em;
+      position: absolute;
+      top: 10px;
+      left: 0;
+      padding: 0.5em;
+      transition: all .2s ease-in-out;
+    }
 
-        .github-header::hover {
-            color: #47e6c7;
-        }
-    </style>
+    .github-header::hover {
+      color: #47e6c7;
+    }
+  </style>
 
-    <template>
-        <a href="#" class="github-header link"><span class="icon big icon-github-circled"></span></a>
+  <template>
+    <a href="#" class="github-header link"><span class="icon big icon-github-circled"></span></a>
 
-        <nav>
-            <ul>
-                <li><a href="">Projects</a></li>
-                <li><a href="">About me</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
-        </nav>
+    <nav>
+      <ul>
+        <li><a href="">Projects</a></li>
+        <li><a href="">About me</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </nav>
 
-        <h1>Lorem Ipsum.</h1>
-        <h2>Lorem Ipsum dolor sit amet.</h2>
-    </template>
+    <h1>[[title]]</h1>
+    <h2>[[message]]</h2>
+  </template>
 </dom-module>
 
 <script>
-    // TODO: Add the object handling here.
-    // TODO: Try passing intro information as an object.
-    Polymer({
-        is: "header-intro",
-        ready: function() {
+  Polymer({
+    is: "header-intro",
+    properties: {
+      title: String,
+      message: String
+    },
+    ready: function() {
 
-        }
-    });
+    }
+  });
 </script>
