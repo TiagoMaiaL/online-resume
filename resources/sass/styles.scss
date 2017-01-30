@@ -145,36 +145,8 @@ header {
 /* contact */
 
 .contact {
-    padding: 2em 1em 3em 1em;
-    margin-bottom: 0;
-
-    .contact-info {
-        margin-bottom: 2em;
-    }
-}
-
-.single-link {
-    display: block;
-
-    .icon {
-        color: #47e6c7;
-        margin-right: 0.4em;
-    }
-
-    .icon,
-    .highlight-hover {
-        transition: all .2s ease-in-out;
-    }
-
-    &:hover {
-        .icon {
-            transform: scale(1.2);
-        }
-
-        .highlight-hover {
-            color: #47e6c7;
-        }
-    }
+  padding: 2em 1em 3em 1em;
+  margin-bottom: 0;
 }
 
 .map-container {
@@ -192,15 +164,6 @@ header {
 
   h6 {
     margin-bottom: .7em;
-  }
-
-  .degree-title {
-    color: #3498db;
-  }
-
-  .link {
-    padding-top: .4em;
-    padding-left: 0;
   }
 }
 
