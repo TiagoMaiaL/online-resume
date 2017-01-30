@@ -12,22 +12,15 @@ $(function() {
   var author = {
     bio: {
       name: "Tiago Maia",
-      role: "Mobile / Web Developer",
-      welcomeMessage: "Lorem ipsum dolor sit amet, consectetur \
-      adipiscing elit, sed do eiusmod tempor incididunt \
-      ut labore et dolore magna aliqua. Ut enim ad minim veniam,\
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea \
-      commodo consequat.",
-      about: "Duis aute irure dolor in reprehenderit in voluptate \
-      velit esse cillum dolore eu fugiat nulla pariatur. \
-      Excepteur sint occaecat cupidatat non proident, \
-      sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      role: "iOS / Web Developer",
+      welcomeMessage: "Hello, I&apos;m Tiago Maia, an iOS and Web Developer located at Brasília, Brazil. Applications and problems solving are the things I appreciate doing.",
+      about: "I really enjoy writing clean and testable code for apps and web sites that follow the specified design patterns and contribute to the user&apos;s life, with a special care for it&apos;s needs and interactions.",
       contacts: { // TODO: Move this object to an external variable.
-        github: "#",
-        email: "#",
-        linkedin: "#"
+        github: "https://github.com/TiagoMaiaL",
+        email: "mailto:tiago.maia.lopes@gmail.com",
+        linkedin: "https://www.linkedin.com/in/tiago-maia?trk=nav_responsive_tab_profile"
       },
-      skills: "js, html, css, php, objective-c",
+      skills: "I have interests for different tools and technologies, but right now I&apos;m mainly interested in these: JS, HTML, CSS, PHP, Objective-c and Swift.",
       devicons: {
         html: "devicon-html5-plain",
         css: "devicon-css3-plain",
@@ -54,44 +47,32 @@ $(function() {
     work: {
       jobs: [
         {
-          employer: "Lorem Ipsum",
+          employer: "Ideia Inteligência",
           title: "Web developer",
           location: "Brasília area, Brazil",
-          date: "11-2099",
-          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\
-           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\
-           Lorem ipsum dolor sit amet, consectetur adipiscing elit,\
-           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          date: "01-2017",
+          description: "I&apos;ve delivered testable and clean server side code, according to the user&apos;s needs, I&apos;ve also written front-end code, using AngularJS. I also implemented automated tests and monitored the app&apos;s performance."
         },
         {
-          employer: "Lorem Ipsum",
-          title: "Web developer",
+          employer: "Ideia Inteligência",
+          title: "iOS Developer",
           location: "Brasília area, Brazil",
-          date: "11-2099",
-          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\
-           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\
-           Lorem ipsum dolor sit amet, consectetur adipiscing elit,\
-           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          date: "10-2015",
+          description: "I&apos;ve developed, maintained and delivered high-quality iOS applications built with Objective-C/Swift, always following the proper code style guide, implementing tests and monitoring performance. I also have a good eye for design and I&apos;ve always followed the designer&apos;s UX/UI specification to implement a pixel-perfect layout and deliver the best possible experience to the end-user."
         },
         {
-          employer: "Lorem Ipsum",
-          title: "Web developer",
+          employer: "Adjetiva",
+          title: "iOS Developer",
           location: "Brasília area, Brazil",
-          date: "11-2099",
-          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\
-           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\
-           Lorem ipsum dolor sit amet, consectetur adipiscing elit,\
-           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          date: "11-2014",
+          description: "I&apos;ve developed, maintained and delivered high-quality iOS applications built with Objective-C/Swift, always following the proper code style guide, implementing tests and monitoring performance. I also have a good eye for design and I&apos;ve always followed the designer&apos;s UX/UI specification to implement a pixel-perfect layout and deliver the best possible experience to the end-user."
         },
         {
-          employer: "Lorem Ipsum",
-          title: "Web developer",
+          employer: "Radiola Design & Publicidade",
+          title: "Front-End Developer",
           location: "Brasília area, Brazil",
-          date: "11-2099",
-          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\
-           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\
-           Lorem ipsum dolor sit amet, consectetur adipiscing elit,\
-           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          date: "02-2014",
+          description: "I&apos;ve developed, and maintained websites using HTML, CSS and Javascript. My concerns were to write code that was testable, clean, mantainable and simple. I&apos;ve always followed the design specifications and created web sites that were reliable and a joy to use.",
         }
       ],
       display: function() {
@@ -147,12 +128,12 @@ $(function() {
     education: {
       schools: [
         {
-          name: "School name",
+          name: "Fundação Bradesco",
           location: "Brasilia, Brazil",
-          degree: "Degree title",
-          majors: "Major text",
-          dates: "12/11/2099",
-          url: "www.schoolname.com"
+          degree: "high school diploma",
+          majors: "",
+          dates: "2012",
+          url: ""
         }
       ],
       onlineCourses: [
@@ -160,7 +141,7 @@ $(function() {
           title: "Front end nanodegree",
           school: "Udacity",
           dates: "12/11/2099",
-          url: "www.udacity.com"
+          url: "https://br.udacity.com/course/front-end-web-developer-nanodegree--nd001/"
         }
       ],
       display: function() {
@@ -171,13 +152,11 @@ $(function() {
     },
     contacts: {
       contacts: {
-        github: "#",
-        email: "#",
-        linkedin: "#"
+        github: "https://github.com/TiagoMaiaL",
+        email: "mailto:tiago.maia.lopes@gmail.com",
+        linkedin: "https://www.linkedin.com/in/tiago-maia?trk=nav_responsive_tab_profile"
       },
-      callAction: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\
-       sed do eiusmod tempor incididunt ut labore\
-        et dolore magna aliqua. Ut enim ad minim.",
+      callAction: "Have any project, or want to know more? Feel free to contact me.",
       display: function() {
         $("section.contact").append(
           replaceData(resumeTemplate.contacts, this)

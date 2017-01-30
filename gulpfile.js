@@ -72,7 +72,8 @@ gulp.task('images', function() {
         quality: 70,
         progressive: true,
         compressionLevel: 6,
-        withMetaData: false
+        withMetaData: false,
+        errorOnEnlargement: false
       }))
     .pipe(gulp.dest(imagesBuildPath));
 });
