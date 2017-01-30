@@ -2,33 +2,22 @@
 
 <dom-module id="header-intro">
   <style>
-    h1,
-    h2 {
+    .header-intro__title,
+    .header-intro__message {
       color: #fff;
       text-align: center;
     }
 
-    h1 {
+    .header-intro__title {
       font-size: 2.4em;
       margin-bottom: 0.5em;
     }
 
-    h2 {
+    .header-intro__message {
       font-size: 1.4em;
     }
 
-    nav {
-      position: fixed;
-      top: 0;
-      display: none;
-    }
-
-    nav ul li {
-      float: left;
-      margin-left: 1em;
-    }
-
-    .github-header {
+    .header-intro__github-link {
       font-size: 1.5em;
       position: absolute;
       top: 10px;
@@ -37,14 +26,29 @@
       transition: all .2s ease-in-out;
     }
 
-    .github-header::hover {
+    .header-intro__github-link::hover {
       color: #47e6c7;
     }
+
+    /*TODO: Add style to the nav element.*/
+
+    /*nav {
+      position: fixed;
+      top: 0;
+      display: none;
+    }
+
+    nav ul li {
+      float: left;
+      margin-left: 1em;
+    }*/
+
   </style>
 
-  <template>
-    <a href="#" class="github-header link"><span class="icon big icon-github-circled"></span></a>
+  <template class="header-intro">
+    <a href="#" class="header-intro__github-link link"><span class="icon big icon-github-circled"></span></a>
 
+    <!-- TODO: Add an element for the nav. -->
     <nav>
       <ul>
         <li><a href="">Projects</a></li>
@@ -53,8 +57,8 @@
       </ul>
     </nav>
 
-    <h1>[[title]]</h1>
-    <h2>[[message]]</h2>
+    <h1 class="header-intro__title">[[title]]</h1>
+    <h2 class="header-intro__message">[[message]]</h2>
   </template>
 </dom-module>
 
