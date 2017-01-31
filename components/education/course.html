@@ -2,42 +2,33 @@
 
 <dom-module id="single-course">
   <style>
-    p {
-      margin-bottom: .2em;
-    }
-
-    .location {
-      font-size: .7em;
-    }
+    /* course block */
 
     .course {
       margin-left: 1em;
       margin-bottom: 1.5em;
     }
 
-    .course .degree-title {
+    .course__degree-title {
       margin-bottom: .2em;
-    }
-
-    .degree-title {
       color: #3498db;
     }
 
-    .link {
-      padding-top: .4em;
-      padding-left: 0;
+    .course__dates {
+      color: #ecf0f1;
     }
 
-    .time-range {
-      color: #ecf0f1;
+    .course__link {
+      padding-top: .4em;
+      padding-left: 0;
     }
   </style>
 
   <template>
     <article class="course">
-      <h6>[[course.school]]</h6>
-      <p class="degree-title">[[course.title]] &bull; <span class="time-range"><time>[[course.dates]]</time></span></p>
-      <a href="[[course.url]]" target="_blank" class="single-link link"><i class="icon icon-website"></i> Udacity</a>
+      <h6 class="course__school-name">[[course.school]]</h6>
+      <p class="course__degree-title     degree-title">[[course.title]] &bull; <span class="course__dates     time-range"><time>[[course.dates]]</time></span></p>
+      <a href="[[course.url]]" target="_blank" class="course__link single-link link"><i class="icon icon-website"></i> Udacity</a>
     </article>
   </template>
 </dom-module>
