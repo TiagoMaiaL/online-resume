@@ -140,7 +140,7 @@ $(function() {
         {
           title: "Front end nanodegree",
           school: "Udacity",
-          dates: "12/11/2099",
+          dates: "01/2017",
           url: "https://br.udacity.com/course/front-end-web-developer-nanodegree--nd001/"
         }
       ],
