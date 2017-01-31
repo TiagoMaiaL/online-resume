@@ -14,13 +14,13 @@ $(function() {
       name: "Tiago Maia",
       role: "iOS / Web Developer",
       welcomeMessage: "Hello, I&apos;m Tiago Maia, an iOS and Web Developer located at Brasília, Brazil. Applications and problems solving are the things I appreciate doing.",
-      about: "I really enjoy writing clean and testable code for apps and web sites that follow the specified design patterns and contribute to the user&apos;s life, with a special care for it&apos;s needs and interactions.",
+      about: "I really enjoy writing clean and testable code for apps and web sites that follow the specified design specifications and contribute to the user&apos;s life, with a special care for it&apos;s needs and interactions.",
       contacts: { // TODO: Move this object to an external variable.
         github: "https://github.com/TiagoMaiaL",
         email: "mailto:tiago.maia.lopes@gmail.com",
         linkedin: "https://www.linkedin.com/in/tiago-maia?trk=nav_responsive_tab_profile"
       },
-      skills: "I have interests for different tools and technologies, but right now I&apos;m mainly interested in these: JS, HTML, CSS, PHP, Objective-c and Swift.",
+      skills: "I have interests for different tools and technologies, but right now I&apos;m focused in these: JS, HTML, CSS, PHP, Objective-c and Swift.",
       devicons: {
         html: "devicon-html5-plain",
         css: "devicon-css3-plain",
@@ -156,7 +156,7 @@ $(function() {
         email: "mailto:tiago.maia.lopes@gmail.com",
         linkedin: "https://www.linkedin.com/in/tiago-maia?trk=nav_responsive_tab_profile"
       },
-      callAction: "Have any project, or want to know more? Feel free to contact me.",
+      callAction: "Do you have any project, or want to know more about me? Feel free to get in touch.",
       display: function() {
         $("section.contact").append(
           replaceData(resumeTemplate.contacts, this)
