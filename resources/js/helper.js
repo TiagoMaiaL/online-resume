@@ -72,7 +72,7 @@ $(function() {
           title: "Front-End Developer",
           location: "Brasília area, Brazil",
           date: "02-2014",
-          description: "I&apos;ve developed, and maintained websites using HTML, CSS and Javascript. My concerns were to write code that was testable, clean, mantainable and simple. I&apos;ve always followed the design specifications and created web sites that were reliable and a joy to use.",
+          description: "I&apos;ve developed and maintained websites using HTML, CSS, and Javascript. My concerns were to write code that was testable, clean, maintainable and simple. I&apos;ve always followed the design specifications and created web-sites that were reliable and a joy to use.",
         }
       ],
       display: function() {
