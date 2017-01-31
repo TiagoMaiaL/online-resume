@@ -2,43 +2,46 @@
 
 <dom-module id="work-experience">
   <style>
-    p {
-      margin-bottom: 0.5em;
-    }
+    /* experience block */
 
-    h5 {
-      margin-bottom: 1.2em;
-    }
-
-    .occupation-info {
+    .experience {
       padding: 2em 0 2em 0;
       border-bottom: 1px solid #196090;
     }
 
-    .occupation-meta {
+    .experience__role {
+      margin-bottom: 1.2em;
+    }
+
+    .experience__meta-info {
       width: 100%;
       line-height: 1.6em;
       font-size: .9em;
+      margin-bottom: 0.5em;
     }
 
-    .employer {
+    .experience__employer {
       color: #3498db;
       font-size: 1.1em;
     }
 
-    .time-range {
+    .experience__dates {
       font-size: .9em;
       margin-left: 1em;
+    }
+
+    .experience__description {
+      margin-bottom: 0.5em;
     }
   </style>
 
   <template>
-    <article class="occupation-info clearfix">
-      <h5 class="job-title">[[title]]</h5>
-      <div class="meta-info center-parent-vertical">
-          <p class="occupation-meta"><span class="employer">[[employer]]</span><span class="time-range"><time>[[date]]</time></span></p>
+    <article class="experience clearfix">
+      <h5 class="experience__role">[[title]]</h5>
+      <div class="center-parent-vertical">
+          <p class="experience__meta-info"><span class="experience__employer">[[employer]]</span><span class="experience__dates"><time>[[date]]</time></span></p>
       </div>
-      <p class="work-description">[[description]]</p>
+      <p class="experience__description">[[description]]</p>
     </article>
   </template>
 </dom-module>

@@ -3,30 +3,32 @@
 
 <dom-module id="author-work">
   <style>
-    h3 {
+    /* work block */
+
+    .work__title {
       margin-bottom: 0;
     }
   </style>
 
   <template>
-    <h3>Work</h3>
+    <div class="work">
+      <h3 class="work__title">Work</h3>
 
-    <!-- TODO: Add a loop here. -->
-    <template is="dom-repeat" items="[[info.jobs]]">
-      <work-experience
-        title="[[item.title]]"
-        employer="[[item.employer]]"
-        date="[[item.date]]"
-        description="[[item.description]]">
-      </work-experience>
-    </template>
+      <template is="dom-repeat" items="[[info.jobs]]">
+        <work-experience
+          class="work__experience"
+          title="[[item.title]]"
+          employer="[[item.employer]]"
+          date="[[item.date]]"
+          description="[[item.description]]">
+        </work-experience>
+      </template>
 
+    </div>
   </template>
 </dom-module>
 
 <script>
-  // TODO: Add the object handling here.
-  // TODO: Try passing intro information as an object.
   Polymer({
     is: "author-work",
     properties: {
