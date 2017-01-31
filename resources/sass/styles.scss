@@ -19,105 +19,105 @@
 /* layout */
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 17px;
-    line-height: 1.4em;
-    text-rendering: optimizeLegibility;
-    color: #ecf0f1;
-    background: rgb(44,62,80);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 17px;
+  line-height: 1.4em;
+  text-rendering: optimizeLegibility;
+  color: #ecf0f1;
+  background: rgb(44,62,80);
 
-    section {
-        padding: 0 1em;
-    }
+  section {
+    padding: 0 1em;
+  }
 
-    section, header {
-        margin-bottom: 3em;
-    }
+  section, header {
+    margin-bottom: 3em;
+  }
 }
 
 /* elements */
 
 h1 {
-    font-size: 2.8em;
-    line-height: 1em;
-    margin-bottom: 0.2em;
+  font-size: 2.8em;
+  line-height: 1em;
+  margin-bottom: 0.2em;
 }
 
 h2 {
-    font-size: 2.4em;
-    line-height: 1em;
-    margin-bottom: 0.2em;
+  font-size: 2.4em;
+  line-height: 1em;
+  margin-bottom: 0.2em;
 }
 
 h3 {
-    font-size: 2em;
-    margin-bottom: 1em;
+  font-size: 2em;
+  margin-bottom: 1em;
 }
 
 h4 {
-    font-size: 1.4em;
-    margin-bottom: 1em;
+  font-size: 1.4em;
+  margin-bottom: 1em;
 }
 
 h5 {
-    font-size: 1.2em;
-    margin-bottom: 1em;
+  font-size: 1.2em;
+  margin-bottom: 1em;
 }
 
 section {
-    padding: 3em 0;
+  padding: 3em 0;
 
 
-    h3 {
-        margin-bottom: 1.3em;
-        width: 100%;
-        display: block;
-    }
+  h3 {
+    margin-bottom: 1.3em;
+    width: 100%;
+    display: block;
+  }
 }
 
 p {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
-    padding: 1em;
+  text-decoration: none;
+  color: inherit;
+  padding: 1em;
 }
 
 /* ------------------------ */
 /* Classes */
 
 .clearfix:after {
-    visibility: hidden;
-    display: block;
-    font-size: 0;
-    content: " ";
-    clear: both;
-    height: 0;
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
 }
 
 .center-parent-vertical {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 // TODO: Add components for each of this.
 .icon {
-    display: inline-block;
+  display: inline-block;
 
-    &.big {
-        font-size: 1.3em;
-    }
+  &.big {
+    font-size: 1.3em;
+  }
 }
 
 .link {
-    display: block;
+  display: block;
 }
 
 /* ------------------------ */
@@ -126,20 +126,22 @@ a {
 /* header */
 
 header {
-    height: 98vh;
-    background: linear-gradient(rgba(44,62,80,0.8), rgb(44,62,80)), url(../resources/images/hero-large.jpg);
-    background-size: cover;
-    background-position: center;
-    padding: 0 1em;
-    position: relative;
+  height: 98vh;
+  background: linear-gradient(rgba(44,62,80,0.8), rgb(44,62,80)), url(../resources/images/hero-large.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 0 1em;
+  position: relative;
 }
 
 /* projects */
 
 .projects,
 .projects-sample {
-  display: none;
-  min-height: 100vh;
+  // display: none;
+
+  // TODO: Remove this min-height for now.
+  // min-height: 100vh;
   margin-bottom: 3em;
 }
 
@@ -151,7 +153,7 @@ header {
 }
 
 .map-container {
-    display: none;
+  display: none;
 }
 
 /* education */
@@ -171,184 +173,168 @@ header {
 /* footer */
 
 footer {
-    width: 100%;
-    padding: 0.6em;
-    text-align: center;
-    font-size: 0.85em;
+  width: 100%;
+  padding: 0.6em;
+  text-align: center;
+  font-size: 0.85em;
 
-    p {
-        margin: 0;
-    }
+  p {
+    margin: 0;
+  }
 
-    em {
-        margin-top: 0.2em;
-        display: inline-block;
-        font-size: 0.75em;
-        color: #47e6c7;
-    }
+  em {
+    margin-top: 0.2em;
+    display: inline-block;
+    font-size: 0.75em;
+    color: #47e6c7;
+  }
 }
 
 /* Media queries */
 
 @media (min-width: 450px) {
-    body {
-        font-size: 19px;
-    }
+  body {
+    font-size: 19px;
+  }
 
-    .about {
-        .skills {
-            font-size: 1.1em;
+  .about {
+    .skills {
+      font-size: 1.1em;
 
-            .tool-icon {
-                margin: .4em .35em;
-            }
-        }
+      .tool-icon {
+        margin: .4em .35em;
+      }
     }
+  }
 
-    .occupation-info {
-        font-size: 1.1em;
-        padding: 1em;
-    }
-
-    .projects-sample {
-        display: none;
-    }
+  .occupation-info {
+    font-size: 1.1em;
+    padding: 1em;
+  }
 }
 
 @media (min-width: 600px) {
 
-    body {
-        font-size: 19px;
+  body {
+    font-size: 19px;
+  }
+
+  .work {
+    h3 {
+      margin-bottom: 1em;
     }
+  }
 
-    .work {
-        h3 {
-            margin-bottom: 1em;
-        }
-    }
-
-    .projects-sample {
-        display: none;
-        min-height: inherit;
-
-        .project-grid {
-            // TODO: Add a mixin for the flex rules.
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-        }
-
-        .project {
-            margin-right: 15px;
-        }
-    }
+  .projects-sample {
+    height: inherit;
+  }
 }
 
 @media (min-width: 700px) {
 
-    .lg-hidden {
-        display: none;
-    }
+  .lg-hidden {
+    display: none;
+  }
 
-    .about {
-        margin-bottom: 2em;
+  .about {
+    margin-bottom: 2em;
 
-        .skills-container {
-            .skills {
-                padding-top: 0;
-                width: 100%;
-                text-align: left;
-                font-size: 1em;
-            }
-        }
-    }
-
-    .project {
-        .sources {
-            font-size: 1.2em;
-        }
-    }
-
-    .contact-info {
-        margin-top: 1em;
-    }
-
-    .occupation-info {
-        padding: 3em;
-        padding-left: 0;
+    .skills-container {
+      .skills {
+        padding-top: 0;
+        width: 100%;
+        text-align: left;
         font-size: 1em;
+      }
     }
+  }
 
-    .schools,
-    .online-courses {
-        padding: 1em;
-        margin: 0 auto;
+  .project {
+    .sources {
+      font-size: 1.2em;
     }
+  }
 
-    .course,
-    .school {
-        margin-left: 0;
-    }
+  .contact-info {
+    margin-top: 1em;
+  }
+
+  .occupation-info {
+    padding: 3em;
+    padding-left: 0;
+    font-size: 1em;
+  }
+
+  .schools,
+  .online-courses {
+    padding: 1em;
+    margin: 0 auto;
+  }
+
+  .course,
+  .school {
+    margin-left: 0;
+  }
 }
 
 @media (min-width: 900px) {
 
-    body {
-        font-size: 19px;
+  body {
+    font-size: 19px;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  a {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .grid-middle {
+    width: 900px;
+    margin: 0 auto;
+  }
+
+  .contact {
+    flex-direction: row-reverse;
+
+    .contacts {
+      padding-left: 0;
     }
 
-    main {
-        width: 100%;
+    .contact-info {
+      padding-left: 1em;
     }
+  }
 
-    a {
-        padding-left: 0;
-        padding-right: 0;
+  .projects-sample {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+
+  .project {
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0px 0px 30px 0px rgba(28,28,28,1);
+
+      .dark-overlay {
+        opacity: .8;
+      }
+
+      .meta-info {
+        display: block;
+        opacity: 1;
+        margin-bottom: 0;
+        visibility: visible;
+      }
     }
+  }
 
-    .grid-middle {
-        width: 900px;
-        margin: 0 auto;
-    }
-
-    .contact {
-        flex-direction: row-reverse;
-
-        .contacts {
-            padding-left: 0;
-        }
-
-        .contact-info {
-            padding-left: 1em;
-        }
-    }
-
-    .projects-sample {
-        margin-top: 3em;
-        margin-bottom: 3em;
-    }
-
-    .project {
-        transition: all 0.2s ease-in-out;
-        cursor: pointer;
-
-        &:hover {
-            box-shadow: 0px 0px 30px 0px rgba(28,28,28,1);
-
-            .dark-overlay {
-                opacity: .8;
-            }
-
-            .meta-info {
-                display: block;
-                opacity: 1;
-                margin-bottom: 0;
-                visibility: visible;
-            }
-        }
-    }
-
-    .education {
-        margin-top: 3em;
-    }
+  .education {
+    margin-top: 3em;
+  }
 }

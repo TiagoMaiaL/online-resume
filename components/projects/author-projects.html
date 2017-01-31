@@ -3,34 +3,54 @@
 
 <dom-module id="author-projects">
   <style>
-    .portfolio-link {
+    /* projects block */
+
+    .projects {
+      height: inherit;
+    }
+
+    .projects__portfolio-link {
       margin-top: 1em;
     }
 
-    .portfolio-link a {
+    /* TODO: Remove this styles and move them to the link web component. */
+    .project__portfolio-anchor {
       padding-left: 0;
     }
-
-    .portfolio-link .icon {
+    .project__portfolio-icon {
       margin-right: 1em;
     }
 
+    /* project-grid block */
+
     .project-grid {
-      margin-left: -1em;
-      margin-right: -1em;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+
+      margin-right: -15px;
+    }
+
+    .project-grid__single {
+      width: calc((100% / 12 * 4) - 15px);
+      margin-right: 15px;
     }
   </style>
 
   <template>
-    <h3>Projects</h3>
+    <div class="projects">
+      <h3 class="projects__title">Projects</h3>
 
-    <div class="project-grid clearfix">
-      <template is="dom-repeat" items="[[info.projects]]">
-        <single-project project-data="[[item]]" class="col-md-4"></single-project>
-      </template>
+      <div class="project-grid">
+        <template is="dom-repeat" items="[[info.projects]]">
+          <single-project
+            project-data="[[item]]"
+            class="project-grid__single"></single-project>
+        </template>
+      </div>
+
+      <p class="projects__portfolio-link single-link"><a href="" class="project__portfolio-anchor  link"><i class="project__portfolio-icon icon icon-website"></i>Check more on my <span class="highlight-hover">portfolio</span>.</a></p>
     </div>
-
-    <p class="portfolio-link single-link"><a href="" class="link"><i class="icon icon-website"></i>Check more on my <span class="highlight-hover">portfolio</span>.</a></p>
   </template>
 </dom-module>
 
