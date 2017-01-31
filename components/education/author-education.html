@@ -10,22 +10,25 @@
   </style>
 
   <template>
-    <h3>Education</h3>
+    <div class="education">
+      <h3>Education</h3>
 
-    <div class="md-container col-md-12">
-      <div class="schools col-md-5">
-        <h4>Schools</h4>
-        <template is="dom-repeat" items="[[info.schools]]">
-          <single-school school="[[item]]"></single-school>
-        </template>
+      <div class="md-container col-md-12">
+        <div class="schools col-md-5">
+          <h4>Schools</h4>
+          <template is="dom-repeat" items="[[info.schools]]">
+            <single-school class="schools__single" school="[[item]]"></single-school>
+          </template>
+        </div>
+
+        <div class="online-courses col-md-5">
+          <h4>Online courses</h4>
+          <template is="dom-repeat" items="[[info.onlineCourses]]">
+            <single-course class="online-courses__single" course="[[item]]"></single-course>
+          </template>
+        </div>
       </div>
 
-      <div class="online-courses col-md-5">
-        <h4>Online courses</h4>
-        <template is="dom-repeat" items="[[info.onlineCourses]]">
-          <single-course course="[[item]]"></single-course>
-        </template>
-      </div>
     </div>
   </template>
 </dom-module>
