@@ -51,7 +51,7 @@ $(function() {
           title: "Web developer",
           location: "Brasília area, Brazil",
           date: "01-2017",
-          description: "I&apos;ve delivered testable and clean server side code, according to the user&apos;s needs, I&apos;ve also written front-end code, using AngularJS. I also implemented automated tests and monitored the app&apos;s performance."
+          description: "I&apos;ve worked mostly with the server-side stack of the application, using Laravel, Postgres and ElasticSearch, writing clean code, delivering automated tests and creating new endpoints for the company&apos;s product. I&apos;ve also worked with AngularJS, delivering code to interact directly with the user&apos;s browser."
         },
         {
           employer: "Ideia Inteligência",
@@ -140,7 +140,7 @@ $(function() {
         {
           title: "Front end nanodegree",
           school: "Udacity",
-          dates: "01/2017",
+          dates: "In progress",
           url: "https://br.udacity.com/course/front-end-web-developer-nanodegree--nd001/"
         }
       ],

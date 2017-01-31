@@ -27,12 +27,16 @@
       padding-top: .4em;
       padding-left: 0;
     }
+
+    .time-range {
+      color: #ecf0f1;
+    }
   </style>
 
   <template>
     <article class="course">
-      <h6>[[course.school]] &bull; <span class="time-range"><time>[[course.dates]]</time></span></h6>
-      <p class="degree-title">[[course.title]]</p>
+      <h6>[[course.school]]</h6>
+      <p class="degree-title">[[course.title]] &bull; <span class="time-range"><time>[[course.dates]]</time></span></p>
       <a href="[[course.url]]" target="_blank" class="single-link link"><i class="icon icon-website"></i> Udacity</a>
     </article>
   </template>
