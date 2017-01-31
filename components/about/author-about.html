@@ -4,64 +4,72 @@
 
 <dom-module id="author-about">
   <style>
+    /* about block */
+
     .about {
       padding-top: 2em;
       margin-bottom: 5em;
     }
 
+    .about__introduction {
+      margin-bottom: 2em;
+    }
+
+    .about__skills {
+      padding: 1em 0 0 0;
+    }
+
+    .about__contacts,
+    .about__skills {
+      margin-bottom: 1.5em;
+    }
+
+    /* information block */
+
     .information {
       margin-bottom: 1em;
     }
 
-    .information p {
+    .information__welcome,
+    .information__about,
+    .information__skills {
       margin-bottom: 2em;
     }
 
-    .information p:last-child {
-      margin: 0;
+    /* image-container block */
+
+    .image-container {
+      margin-bottom: 1.5em;
     }
 
-    .author-intro {
-      margin-bottom: 2em;
-    }
-
-    .author-image img {
+    .image-container__image {
       display: block;
       margin: 0 auto;
       width: 60%;
       max-width: 320px;
       border-radius: 50%;
     }
-
-    author-skills {
-      padding: 1em 0 0 0;
-    }
-
-    .author-image,
-    .contacts,
-    author-skills {
-      margin-bottom: 1.5em;
-    }
   </style>
 
   <template>
-    <div class="md-container">
-      <div class="author-intro md-container col-md-12">
+    <div class="about md-container">
+      <div class="about__introduction md-container col-md-12">
+
         <article class="information col-md-7">
-          <h3>About me</h3>
-          <p>[[info.welcomeMessage]]</p>
-          <p>[[info.about]]</p>
-          <p>[[info.skills]]</p>
+          <h3 class="information__title">About me</h3>
+          <p class="information__welcome">[[info.welcomeMessage]]</p>
+          <p class="information__about">[[info.about]]</p>
+          <p class="information__skills">[[info.skills]]</p>
         </article>
 
-        <div class="author-image center-parent-vertical col-md-5">
+        <div class="image-container center-parent-vertical col-md-5">
           <picture>
-            <img src="../../build/resources/images/profile-small.jpg" class="image-cover" alt="author picture">
+            <img src="../../build/resources/images/profile-small.jpg" class="image-container__image image-cover" alt="author picture">
           </picture>
         </div>
       </div>
-      <single-contacts contacts="{{info.contacts}}" class="col-md-6"></single-contacts>
-      <author-skills tools="{{info.devicons}}" class="col-md-6"></author-skills>
+      <single-contacts contacts="{{info.contacts}}" class="about__contacts col-md-6"></single-contacts>
+      <author-skills tools="{{info.devicons}}" class="about__skills col-md-6"></author-skills>
     </div>
   </template>
 </dom-module>
