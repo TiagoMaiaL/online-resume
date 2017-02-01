@@ -2,34 +2,38 @@
 
 <dom-module id="single-contacts">
   <style>
-    .single-link {
+    /* contact-links block */
+
+    .contact-links__link {
       display: block;
     }
 
-    .icon {
+    .contact-links__icon {
       color: #47e6c7;
       margin-right: 0.4em;
-    }
-
-    .icon,
-    .highlight-hover {
       transition: all .2s ease-in-out;
     }
 
-    .single-link:hover .icon {
+    .contact-links__highlight {
+      transition: all .2s ease-in-out;
+    }
+
+    .contact-links__link:hover .contact-links__icon {
       transform: scale(1.2);
     }
 
-    .single-link:hover .highlight-hover {
+    .contact-links__link:hover .contact-links__highlight {
       color: #47e6c7;
     }
   </style>
 
   <template>
-    <ul class="contacts">
-      <li class="single-link"><a href="[[contacts.email]]" class="link" title="Email link"><span class="icon big icon-mail"></span> send me an <span class="highlight-hover">email</span>.</a></li>
-      <li class="single-link"><a href="[[contacts.linkedin]]" target="_blank" class="link" title="LinkedIn profile link"><span class="icon big icon-linkedin"></span> take a look at my <span class="highlight-hover">Linkedin</span>.</a></li>
-      <li class="single-link"><a href="[[contacts.github]]" target="_blank" class="link" title="Github profile link"><span class="icon big icon-github-circled"></span> check my code at <span class="highlight-hover">Github</span>.</a></li>
+    <ul class="contact-links">
+      <li class="contact-links__link single-link"><a href="[[contacts.email]]" class="link" title="Email link"><span class="contact-links__icon icon big icon-mail"></span> Send me an <span class="contact-links__highlight">email</span>.</a></li>
+
+      <li class="contact-links__link single-link"><a href="[[contacts.linkedin]]" target="_blank" class="link" title="LinkedIn profile link"><span class="contact-links__icon icon big icon-linkedin"></span> Take a look at my <span class="contact-links__highlight">Linkedin</span>.</a></li>
+
+      <li class="contact-links__link single-link"><a href="[[contacts.github]]" target="_blank" class="link" title="Github profile link"><span class="contact-links__icon icon big icon-github-circled"></span> Check my code at <span class="contact-links__highlight">Github</span>.</a></li>
     </ul>
   </template>
 </dom-module>
