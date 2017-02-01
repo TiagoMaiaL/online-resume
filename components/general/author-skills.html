@@ -2,33 +2,37 @@
 
 <dom-module id="author-skills">
   <style>
-    .skills-container {
+    /* skills block */
+
+    .skills {
       margin-top: 3em;
     }
 
-    .tool-icon {
-      font-size: 2.5em;
-      display: inline-block;
-      margin: 0.4em 0.5em;
-      color: #47e6c7;
-    }
-
     @media screen and (min-width: 701px) {
-      .skills-container {
+      .skills {
         margin-top: 0;
       }
+    }
+
+    /* icons block */
+
+    .icons__item {
+      font-size: 2.4em;
+      display: inline-block;
+      margin: 0.4em 0.4em;
+      color: #47e6c7;
     }
   </style>
 
   <template>
-    <div class="skills-container">
-      <h5 class="lg-hidden">Skills &amp; tools</h5>
-      <p class="lg-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+    <div class="skills">
+      <h5 class="skills__title lg-hidden">Skills &amp; tools</h5>
+      <p class="skills__description lg-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
 
-      <article class="skills col-md-12">
+      <article class="icons col-md-12">
         <template is="dom-repeat" items="{{toArray(tools)}}">
           <!-- TODO: Add a component for each icon -->
-          <i class$="tool-icon [[item.value]]"></i>
+          <i class$="icons__item [[item.value]]"></i>
         </template>
       </article>
     </div>

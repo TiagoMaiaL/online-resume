@@ -3,21 +3,25 @@
 
 <dom-module id="author-contacts">
   <style>
-    .contact-info {
-      margin-bottom: 2em;
+    /* contacts block */
+
+    .contacts__action-call {
+      margin: 3em 0;
       order: 2;
     }
 
-    single-contacts {
+    .contacts__single {
       order: 1;
     }
   </style>
 
   <template>
-    <h3>Get in touch</h3>
-    <div class="md-container">
-      <p class="contact-info col-md-6">[[info.callAction]]</p>
-      <single-contacts contacts="[[info.contacts]]" class="col-md-6"></single-contacts>
+    <div class="contacts">
+      <h3 class="contacts__title">Get in touch</h3>
+      <div class="md-container">
+        <p class="contacts__action-call col-md-6">[[info.callAction]]</p>
+        <single-contacts contacts="[[info.contacts]]" class="contacts__single col-md-6"></single-contacts>
+      </div>
     </div>
   </template>
 </dom-module>
