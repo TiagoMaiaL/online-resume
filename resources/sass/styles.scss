@@ -70,13 +70,12 @@ h5 {
 
 section {
   padding: 3em 0;
+}
 
-
-  h3 {
-    margin-bottom: 1.3em;
-    width: 100%;
-    display: block;
-  }
+section h3 {
+  margin-bottom: 1.3em;
+  width: 100%;
+  display: block;
 }
 
 p {
@@ -110,10 +109,9 @@ a {
 // TODO: Add components for each of this.
 .icon {
   display: inline-block;
-
-  &.big {
-    font-size: 1.3em;
-  }
+}
+.icon.big {
+  font-size: 1.3em;
 }
 
 .link {
@@ -138,10 +136,6 @@ header {
 
 .projects,
 .projects-sample {
-  // display: none;
-
-  // TODO: Remove this min-height for now.
-  // min-height: 100vh;
   margin-bottom: 3em;
 }
 
@@ -160,34 +154,28 @@ header {
 
 .education {
   margin-top: 4em;
-
-  h3 {
-    margin-bottom: 2em;
-  }
-
-  h6 {
-    margin-bottom: .7em;
-  }
 }
 
 /* footer */
+
+// TODO: Move this to a component.
 
 footer {
   width: 100%;
   padding: 0.6em;
   text-align: center;
   font-size: 0.85em;
+}
 
-  p {
-    margin: 0;
-  }
+footer p {
+  margin: 0;
+}
 
-  em {
-    margin-top: 0.2em;
-    display: inline-block;
-    font-size: 0.75em;
-    color: #47e6c7;
-  }
+footer em {
+  margin-top: 0.2em;
+  display: inline-block;
+  font-size: 0.75em;
+  color: #47e6c7;
 }
 
 /* Media queries */
